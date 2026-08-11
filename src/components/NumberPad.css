@@ -1,0 +1,81 @@
+.number-pad-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.number-buttons {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 5px;
+  max-width: 540px; /* Matches 9x60px Sudoku grid */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.number-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-btn {
+  width: 100%;
+  max-width: 60px; /* Each button matches one cell width */
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.number-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.number-count {
+  font-size: 14px;
+  color: #333;
+  margin-top: 2px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-erase {
+  background-color: #ff6363;
+  color: white;
+}
+
+.btn-erase:hover {
+  background-color: #d9534f;
+}
+
+.btn-hint {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-hint:hover {
+  background-color: #45a049;
+}

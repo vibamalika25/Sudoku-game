@@ -1,0 +1,42 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of screen */
+  overflow: hidden; /* Prevents full-page scrolling */
+}
+
+.attempts-timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sudoku-board {
+  flex-grow: 1; /* Takes up remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.number-pad-container {
+  max-height: 200px; /* Set max height */
+  overflow-y: auto; /* Enable scrolling */
+  padding: 10px;
+  background: rgb(238, 230, 230);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustment */
+@media screen and (max-width: 768px) {
+  .number-pad-container {
+    max-height: 180px;
+  }
+}

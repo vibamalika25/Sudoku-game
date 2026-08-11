@@ -1,0 +1,63 @@
+.board-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 80px);
+  grid-template-rows: repeat(9, 50px);
+  background-color: #000;
+  padding: 8px;
+  border-radius: 12px;
+  gap: 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cell {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+  user-select: none;
+  border: 1px solid #ccc;
+}
+
+/* Alternate box colors */
+.box-color-1 {
+  background-color: #f1f5f9;
+}
+.box-color-2 {
+  background-color: #e0f2fe;
+}
+
+/* Prefilled numbers */
+.cell.prefilled {
+  background-color: #cbd5e1;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Wrong input - red color */
+.cell.wrong-input {
+  color: red;
+  font-weight: bold;
+}
+
+/* Selected cell highlight */
+.cell.selected {
+  background-color: #b9f3ff;
+  border: 2px solid #0077cc;
+}
+
+.cell:not(.prefilled):hover {
+  background-color: #e0f9ff;
+  transform: scale(1.05);
+}
